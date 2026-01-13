@@ -2,6 +2,7 @@
 Data and scripts for analysis xxxxxxx
 
 compare_genomes
+INPUTS REQUIRED = .faa files for each genome, .GO.tsv for each genome assigning GO terms to each gene, 
 - 01_orthofinder.sh = use othofinder to generate orthogroups between genomes A and B
 - 02_orthogroups.sh = orthogroup presence/absence per genome, and which genes are in each orthogroup
 - 03_make_idmaps.sh = generate table that gives gene name from JGI naming conventions
