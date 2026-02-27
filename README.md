@@ -29,3 +29,42 @@ Compare genes present in ZnT and ZnS genomes to generate core and singleton gene
 - BUSCO_A.sh = ZnT/St230 genome BUSCO analysis
 - BUSCO_B.sh = ZnS/St220 genome BUSCO analysis
 
+## Population Genomics
+Process and filter Illumina reads for 48 _S. tomentosus_ isolates. Scripts for this section of work are based on those used in xxx, and utilised as a member of the RepAdapt group. Please contact xxx to become a member of the RepAdapt working group to answer questions on repeated adaptation across organisms. 
+
+- 01_
+etc
+
+## TranscriptomicsIV - _in vitro_ Zn assays
+Examine differentailly regulated genes between ZnT and ZnS in control (0 mM Zn) and investigate the Zn response of each isolate to increasing Zn. Perform GO analysis on groups of genes found to be differentially regulated. Perform WGCNA analysis to find groups of genes co-expressed across the experiments.
+
+01_PCA
+02_WGCNA
+
+### transcriptomicsIV/ZnS
+
+### transcriptomicsIV/ZnT
+
+### transcriptomicsIV/ZnS_v_ZnT
+
+
+## TranscriptomicsB - Zn bioassays
+Examine differenailly expressed genes between (1) fungal isolates colonizing the roots of _Pinus contorta_ seedlings exposed to increasing Zn concentraions (2) pine root RNA expression changes across those same bioassay treatments.
+
+### transcriptomicsB/fungal
+
+01_PCA
+02_WGCNA
+
+#### transcriptomicsB/fungal/ZnS
+#### transcriptomicsB/fungal/ZnT
+#### transcriptomicsB/fungal/ZnS_v_ZnT
+
+### transcriptomicsB/pine
+
+01_PCA
+02_WGCNA
+
+xxx what comparisons were done?
+
+
