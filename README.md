@@ -1,5 +1,5 @@
 # Zn-tolerance-in-S.tomentosus
-Data and scripts for analysis xxxxxxx
+Data and scripts for analysis in the paper entitled **"A North American mycorrhizal fungus displays zinc tolerance intraspecific variation and protects pines from zinc toxicity"**
 
 ## Compare Genomes
 Compare genes present in ZnT and ZnS genomes to generate core and singleton gene orthogroups in each, and subsequently perform GO analysis on these gene groups.
