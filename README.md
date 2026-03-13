@@ -61,8 +61,6 @@ Compare gene expression from Zn plate assays and fungal-pine bioassays.
 - counts_aligned_pine_genome.txt = RNA reads from bioassays and plate assays aligned to _S. tomentosus_ ZnT genome
 - Suillus_tomentosus_gene_to_go.txt = GO terms for each gene in the ZnT genome
 - Pinus_contorta_gene_to_go.txt = GO terms for each gene in the _P. contorta_ genome
-- Suillus_tomentosus.gmt = matrix file of _S. tomentosus_ gene groups for GSEA 
-- Pinus_contorta.gmt = matrix file of _P. contorta_ gene groups for GSEA
 
 ### transcriptomics/other 
 Scripts for general manipulation and visualisation of data 
