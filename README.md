@@ -53,37 +53,54 @@ Scripts for processing and filter Illumina reads for 48 _S. tomentosus_ isolates
 - 03_FST_SNPs_overlapping_genes.R = pull out genes that intersect SNPs with high FST values in the top FST windows
 - 04_FST_GO_enrichment.R = perform gene ontology analysis on the lists of SNP affected genes extracted above
 
+## Transcriptomics
+Compare gene expression from Zn plate assays and fungal-pine bioassays.
 
-## TranscriptomicsIV - _in vitro_ Zn assays
-Examine differentailly regulated genes between ZnT and ZnS in control (0 mM Zn) and investigate the Zn response of each isolate to increasing Zn. Perform GO analysis on groups of genes found to be differentially regulated. Perform WGCNA analysis to find groups of genes co-expressed across the experiments.
+### transcriptomics/data
+- counts_aligned_ZnT_genome.txt = RNA reads from bioassays aligned to _Pinus contorta_ genome
+- counts_aligned_pine_genome.txt = RNA reads from bioassays and plate assays aligned to _S. tomentosus_ ZnT genome
+- Suillus_tomentosus_gene_to_go.txt = GO terms for each gene in the ZnT genome
+- Pinus_contorta_gene_to_go.txt = GO terms for each gene in the _P. contorta_ genome
+- Suillus_tomentosus.gmt = matrix file of _S. tomentosus_ gene groups for GSEA 
+- Pinus_contorta.gmt = matrix file of _P. contorta_ gene groups for GSEA
 
-01_PCA
-02_WGCNA
+### transcriptomics/other 
+Scripts for general manipulation and visualisation of data 
+- make_gene_to_go_for_fungus.R = generate gene to go maps in the correct file formatfor TopGO for _S. tomentosus_ ZnT genes
+- make_gene_to_go_for_pine.R = generate gene to go maps in the correct file formatfor TopGO for _P. contorta_ genes
+- graphs_of_DEGs.R = generate plots of significantly up and down regulated genes across Zn treatments
+- pullgenes_fromGOterms.R = for each significantly enriched GO term, pull genes assigned to that term that are differentially expressed
+- WGCNA_topModuleContributers.R = extract top ranked genes for trait significance and module membership from WGCNA modules
 
-### transcriptomicsIV/ZnS
+### transcriptomics/plate_assays
+- 01_PCA_fungal_tissue.R = generate PCA plots of fungal transcriptomes from plate assays
+- 02_WGCNA_fungal_tissue.R = perform WGCNA analysis on fungal RNA data from plate assays
+#### plate_assays/ZnT_Zn_response
+- 01_ZnT_fungal_tissue_DEGs.R = determine which genes are differentially expressed in ZnT across Zn gradient (versus control conditions)
+- 02_ZnT_fungal_tissue_TopGO.R = perform gene ontology analysis on DEGs from above
+#### plate_assays/ZnS_Zn_response
+- 01_ZnS_fungal_tissue_DEGs.R = determine which genes are differentially expressed in ZnS across Zn gradient (versus control conditions)
+- 02_ZnS_fungal_tissue_TopGO.R = perform gene ontology analysis on DEGs from above
+#### plate_assays/ZnT_v_ZnS
+- 01_ZnT_v_ZnS_fungal_tissue_DEGs.R = determine which genes are differentially expressed between ZnT and ZnS in control (0 mM Zn) conditions
+- 02_ZnT_v_ZnS_fungal_tissue_TopGO.R = perform gene ontology analysis on DEGs from above
 
-### transcriptomicsIV/ZnT
+### transcriptomics/bioassays/fungal_reads
+- 01_PCA_fungal_bioassay.R = generate PCA plots of fungal transcriptomes from bioassays
+- 02_WGCNA_fungal_bioassay.R = perform WGCNA analysis on fungal RNA data from bioassays
+#### plate_assays/ZnT_Zn_response
+- 01_ZnT_fungal_bioassay_DEGs.R = determine which genes are differentially expressed in ZnT in bioassay across Zn gradient (versus control conditions)
+- 02_ZnT_fungal_bioassay_TopGO.R = perform gene ontology analysis on DEGs from above
+#### plate_assays/ZnS_Zn_response
+- 01_ZnS_fungal_bioassay_DEGs.R = determine which genes are differentially expressed in ZnS in bioassay across Zn gradient (versus control conditions)
+- 02_ZnS_fungal_bioassay_TopGO.R = perform gene ontology analysis on DEGs from above
+#### plate_assays/ZnT_v_ZnS
+- 01_ZnT_v_ZnS_fungal_bioassay_DEGs.R = determine which genes are differentially expressed between ZnT and ZnS in control (0 mM Zn) bioassay conditions
+- 02_ZnT_v_ZnS_fungal_tissue_TopGO.R = perform gene ontology analysis on DEGs from above
 
-### transcriptomicsIV/ZnS_v_ZnT
-
-
-## TranscriptomicsB - Zn bioassays
-Examine differenailly expressed genes between (1) fungal isolates colonizing the roots of _Pinus contorta_ seedlings exposed to increasing Zn concentraions (2) pine root RNA expression changes across those same bioassay treatments.
-
-### transcriptomicsB/fungal
-
-01_PCA
-02_WGCNA
-
-#### transcriptomicsB/fungal/ZnS
-#### transcriptomicsB/fungal/ZnT
-#### transcriptomicsB/fungal/ZnS_v_ZnT
-
-### transcriptomicsB/pine
-
-01_PCA
-02_WGCNA
-
-xxx what comparisons were done?
-
-
+### transcriptomics/bioassays/fungal_reads
+- 01_PCA_pine_bioassay.R
+- 02_pine_bioassay_DEGs.R
+- 03_pine_bioassay_TopGO.R
+- 04_WGCNA_pine_bioassay.R
+- 05_pine_bioassay_ZnT_v_ZnS.R
