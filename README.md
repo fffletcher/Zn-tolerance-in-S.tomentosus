@@ -30,10 +30,29 @@ Compare genes present in ZnT and ZnS genomes to generate core and singleton gene
 - BUSCO_B.sh = ZnS/St220 genome BUSCO analysis
 
 ## Population Genomics
-Process and filter Illumina reads for 48 _S. tomentosus_ isolates. Scripts for this section of work are based on those used in xxx, and utilised as a member of the RepAdapt group. Please contact xxx to become a member of the RepAdapt working group to answer questions on repeated adaptation across organisms. 
+Scripts for processing and filter Illumina reads for 48 _S. tomentosus_ isolates were based on those used in the RepAdapt project. Please contact RepAdapt to become a member of the working group to answer questions on repeated adaptation across organisms. 
 
-- 01_
-etc
+### Downstream scripts for analyses of VCF files generated:
+#### 01_poppr
+- poppr_check_for_clones.R = determine if any samples in the dataset were clones
+
+#### 02_PCA
+- 01_plink_all_biallelic.sh = generate eigenvec and eigenvals for all 48 samples using only biallelic SNPs for PCA
+- 02_PCA_from_Plink.R = generate PCA plot for all 48 samples
+- 03_pull_zn20_from_vcf.sh = make a new vcf containing only data from the top 10 most tolerant and top 10 most sensitive isolates tested
+- 04_plink_zn20.sh = generate eigenvec and eigevals for the top 10 most tolerant and top 10 most sensitive isolates
+- 05_PCA_zn20_from_Plink.R = generate PCA plot for top 10 most tolerant and top 10 most sensitive isolates
+
+#### 03_FastStructure
+- 01_fastStructure_biallelic.sh = run fastStructure for all 48 samples testing K size 1-10 and determining the number of populations most likely represented in the dataset
+- 02_fastStructure_zn20_biallelic.sh = as above but for only the top 10 most tolerant and top 10 most sensitive isolates
+
+#### 04_FST
+- 01_fst_zn20_5kb_windows.sh = compare 10 most tolerant isolates to 10 most sensitive isolates and generate FST values for 5 kb genomic windows
+- 02_plot_fst.R = plot FST values generated above
+- 03_FST_SNPs_overlapping_genes.R = pull out genes that intersect SNPs with high FST values in the top FST windows
+- 04_FST_GO_enrichment.R = perform gene ontology analysis on the lists of SNP affected genes extracted above
+
 
 ## TranscriptomicsIV - _in vitro_ Zn assays
 Examine differentailly regulated genes between ZnT and ZnS in control (0 mM Zn) and investigate the Zn response of each isolate to increasing Zn. Perform GO analysis on groups of genes found to be differentially regulated. Perform WGCNA analysis to find groups of genes co-expressed across the experiments.
