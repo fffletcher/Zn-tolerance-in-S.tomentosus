@@ -30,7 +30,7 @@ Compare genes present in ZnT and ZnS genomes to generate core and singleton gene
 - BUSCO_B.sh = ZnS/St220 genome BUSCO analysis
 
 ## Population Genomics
-Scripts for processing and filter Illumina reads for 48 _S. tomentosus_ isolates were based on those used in the RepAdapt project. Please contact RepAdapt to become a member of the working group to answer questions on repeated adaptation across organisms. 
+Scripts for processing and filter Illumina reads for 48 _S. tomentosus_ isolates were based on those used in the RepAdapt project. Please contact [RepAdapt]((https://github.com/RepAdapt)) to become a member of the working group to answer questions on repeated adaptation across organisms. 
 
 ### Downstream scripts for analyses of VCF files generated:
 #### pop_genomics/01_poppr
